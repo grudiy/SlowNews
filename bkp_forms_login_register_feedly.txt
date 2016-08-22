@@ -1,0 +1,23 @@
+ <h1>Login</h1>
+  <form method="post">
+    <input type="email" autocapitalize="off" autocorrect="off" name="login" class="input-text input-top" placeholder="Email" required="" value="">
+    <input type="password" autocapitalize="off" autocorrect="off" name="password" class="input-text input-bottom" placeholder="Password" required="">
+    <input type="submit" class="button" value="Login">
+  </form>
+  <div class="form-footer">
+    <a href="/register.jsp">New user? Sign up</a><br>
+  </div>
+  
+  
+  
+  
+  <h1>Register</h1>
+    <form method="post">
+      <input type="text" name="name" class="input-text input-top" placeholder="Full name" value="">
+      <input type="email" autocapitalize="off" autocorrect="off" name="login" class="input-text input-middle" placeholder="Email" required="" value="">
+      <input type="password" autocapitalize="off" autocorrect="off" name="password" class="input-text input-bottom" placeholder="Password" onmousedown="this.placeholder='8 characters min';" required="">
+      <input type="submit" class="button" value="Create my account">
+    </form>
+    <div class="form-footer">
+      <a href="/login.jsp">Existing user? Login</a><br>
+    </div>
