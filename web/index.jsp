@@ -9,7 +9,7 @@
   </head>
   <body>
 
-  <div id="content">
+  <div class = "content">
     <h1>Latest news</h1>
     <ul class="news-list">
       <li>

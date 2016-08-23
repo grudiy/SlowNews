@@ -8,7 +8,7 @@
     <link href="style.css" type="text/css" rel="stylesheet">
   </head>
   <body>
-  <div id="sidebar">
+  <div class="sidebar">
     <div class="logo"><a href="/"><img src="images/green-RSS-40.png"></a></div>
     <ul class = "menu-list">
       <li class = "menu-item"><a href = "/" >Home</a></li>

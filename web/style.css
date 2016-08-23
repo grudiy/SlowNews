@@ -18,7 +18,7 @@ h2 a {
     text-decoration: none;
 }
 
-#sidebar {
+.sidebar {
 	width: 180px;
 	float: left;
 	position: fixed;
@@ -53,7 +53,7 @@ h2 a {
 .logo {
     margin-left: 25px;
 }
-#content {
+.content {
 	margin-left: 180px;
     width: 80%;
 	min-width: 240px;
