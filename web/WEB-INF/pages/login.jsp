@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.grudiy.slownews.controller.Storage" %><%--
   Author: grudiy
   Date: 19.08.2016
 --%>
@@ -16,7 +16,7 @@
     <input type="submit" class="button" value="Login">
   </form>
   <div class="form-footer">
-    <a href="/register.jsp">New user? Sign up</a><br>
+    <a href="/register">New user? Sign up</a><br>
   </div>
 </div>
 </body>

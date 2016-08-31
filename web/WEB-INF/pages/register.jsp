@@ -18,7 +18,7 @@
       <input type="submit" class="button" value="Create my account">
     </form>
     <div class="form-footer">
-      <a href="/login.jsp">Existing user? Login</a><br>
+      <a href="/login">Existing user? Login</a><br>
     </div>
   </div>
   </body>
