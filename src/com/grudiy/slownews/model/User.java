@@ -24,15 +24,4 @@ public class User {
                 '}';
     }
 
-    public String getFullName() {
-        return fullName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
 }
