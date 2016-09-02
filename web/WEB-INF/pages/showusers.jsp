@@ -17,9 +17,15 @@
     <h1>Registered Users</h1>
     <div class = "users-list">
         <ul class = "users-list-item">
-            <li><%= "......."%></li>
-            <li><%= "......."%></li>
-            <li><%= "......."%></li>
+            <%=GlobalStorage.getFromMapByKey(request.getRequestURI()) // for map of maps
+                    // OLD version
+             //get all data from GlobalStorage (where it was placed by controller
+                // This was for just HashMap<String, Object>
+                //for (Map.Entry<String, Object> entry : getHashmap().entrySet()) {
+                //    out.println  ("<li>" + "[" + entry.getKey() + "] = "
+                //            + entry.getValue() + "</li>");
+               // }
+            %>
         </ul>
     </div>
 </div>

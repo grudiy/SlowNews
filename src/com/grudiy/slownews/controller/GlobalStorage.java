@@ -6,7 +6,7 @@ import java.util.Map;
  * Created by Owner on 31.08.2016.
  *
  */
-public class GlobalStorage { //Global storage to store any data
+public class GlobalStorage { //storage of data to communicate servlets with JSP
 
     private static Map<String, Map<String, Object>> hashmap = new HashMap<>();
 
