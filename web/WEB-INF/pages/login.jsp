@@ -1,4 +1,4 @@
-<%@ page import="com.grudiy.slownews.controller.Storage" %><%--
+<%--
   Author: grudiy
   Date: 19.08.2016
 --%>

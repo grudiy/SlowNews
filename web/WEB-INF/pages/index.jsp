@@ -1,4 +1,7 @@
 <%@ page import="com.grudiy.slownews.model.NewsItem" %>
+<%@ page import="com.grudiy.slownews.controller.Index" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
 <%--
   Author: grudiy
   Date: 19.08.2016
@@ -13,28 +16,33 @@
   <div class = "content">
     <h1>Latest news</h1>
     <ul class="news-list">
-      <li>
+  <%
+         List<NewsItem> newsList = (ArrayList<NewsItem>) request.getAttribute("newsItems");
+          for (NewsItem newsItem:newsList){
+  %>
+
+      <li class ="news-list-item">
         <div class="news-item">
           <div class="news-item-image-container">
             <div class="news-item-action">
               <div class ="news-item-favorites" title="Add to archive"></div>
             </div>
             <div class="news-item-image">
+                <a href="<%=newsItem.getLink()%>"><img src="<%=newsItem.getImageURL()%>" title="bla bla 7 image"></a>
             </div>
           </div>
           <div class="news-item-text">
-            <h2><a href="#"><%=request.getAttribute("newsItems").get(0)%></a></h2>
-            <p>
-              .................
-            </p>
-            <p>
-              Tonight in Carmel, Calif., Mercedes-Benz unveiled the latest of its Maybach line: the Vision Mercedes-Maybach 6.
-              The gullwing 2+2 concept has a low, sleek hood, a massive touchscreen inside, and an all-electric powertrain. It’s meant to show what a Mercedes-Benz car could look like, and do, in 10 or 15 years' time.
-            </p>
+              <div class = "news-item-title">
+                  <h2><a href="<%=newsItem.getLink()%>"><%=newsItem.getTitle()%></a></h2>
+              </div>
+              <div class="news-item-date"><%=newsItem.getDate()%></div>
+              <%=newsItem.getSummary()%>
           </div>
         </div>
       </li>
+        <%}%>
     </ul>
   </div>
+
   </body>
 </html>

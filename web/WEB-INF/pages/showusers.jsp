@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="com.grudiy.slownews.controller.GlobalStorage" %>
+<%@ page import="other.GlobalStorage" %>
 <%--
   Created by IntelliJ IDEA.
   User: Owner

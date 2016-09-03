@@ -1,4 +1,4 @@
-package com.grudiy.slownews.controller;
+package other;
 import java.util.HashMap;
 import java.util.Map;
 
