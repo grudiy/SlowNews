@@ -20,7 +20,6 @@
     <div class = "adminpanel">
       <h3 class = "subtitle"> Admin Pannel </h3>
       <ul class = "menu-list">
-        <li class = "menu-item"><a href = "/register" >Add users</a></li>
         <li class = "menu-item"><a href = "/showusers" >Show users</a></li>
       </ul>
     </div>

@@ -1,5 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="other.GlobalStorage" %>
+<%@ page import="com.grudiy.slownews.model.User" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="com.grudiy.slownews.model.UserStorage" %>
 <%--
   Created by IntelliJ IDEA.
   User: Owner
@@ -17,10 +21,14 @@
     <h1>Registered Users</h1>
     <div class = "users-list">
         <ul class = "users-list-item">
-            <li><%= "......."%></li>
-            <li><%= "......."%></li>
-            <li><%= "......."%></li>
+           <%
+               Map<Integer, User> usersMap = (Map<Integer, User>) request.getAttribute("dummyUsers");
+               for (Map.Entry<Integer, User> entry : usersMap.entrySet()) { %>
+            <li><%=entry.getValue().getId() + ",  " + entry.getValue().getFullName() + ",  " + entry.getValue().getEmail()%></li>
+        <%}
+        %>
         </ul>
+
     </div>
 </div>
 <body>
