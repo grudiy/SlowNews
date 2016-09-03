@@ -1,5 +1,4 @@
 <%@ page import="com.grudiy.slownews.model.NewsItem" %>
-<%@ page import="com.grudiy.slownews.controller.Index" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
 <%--
@@ -28,7 +27,7 @@
               <div class ="news-item-favorites" title="Add to archive"></div>
             </div>
             <div class="news-item-image">
-                <a href="<%=newsItem.getLink()%>"><img src="<%=newsItem.getImageURL()%>" title="bla bla 7 image"></a>
+                <a href="<%=newsItem.getLink()%>"><img src="<%=newsItem.getImageURL()%>" title=<%=newsItem.getTitle()%>"></a>
             </div>
           </div>
           <div class="news-item-text">

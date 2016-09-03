@@ -1,6 +1,5 @@
 package com.grudiy.slownews.model;
 
-import java.util.Date;
 
 /**
  * Created by Owner on 02.09.2016.

@@ -87,7 +87,6 @@ public class Index extends HttpServlet {
 
         // transmit news list to JSP (VIEW) via Attributes of http request
         request.setAttribute("newsItems", newsList);
-        //request.setAttribute("newsListAttr", "hello from servlet");
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/pages/index.jsp");
         dispatcher.forward(request, response);
