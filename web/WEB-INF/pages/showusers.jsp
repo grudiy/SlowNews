@@ -24,7 +24,7 @@
            <%
                Map<Integer, User> usersMap = (Map<Integer, User>) request.getAttribute("dummyUsers");
                for (Map.Entry<Integer, User> entry : usersMap.entrySet()) { %>
-            <li><%=entry.getValue().getId() + ",  " + entry.getValue().getFullName() + ",  " + entry.getValue().getEmail()%></li>
+            <li><%=entry.getValue().getId() + " | " + entry.getValue().getFullName() + " | " + entry.getValue().getEmail() + " | " + entry.getValue().getPassword() + " | " + entry.getValue().getActivated()%></li>
         <%}
         %>
         </ul>

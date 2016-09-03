@@ -13,4 +13,13 @@ public class UserStorage {
         return usersmap.get(id);
     }
     public static Map<Integer, User> getUsers(){return usersmap;}
+
+    public boolean isEmailUnique(String email) {
+        for (Map.Entry<Integer, User> entry : usersmap.entrySet()) {
+            if (entry.getValue().getEmail().equalsIgnoreCase(email)) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
