@@ -8,11 +8,18 @@ import java.util.Map;
  */
 public class UserStorage {
     private static Map<Integer, User> usersmap = new HashMap<>();
-    public static void addToMap (Integer id, User user ){ usersmap.put(id, user);}
-    public static Object getById (Integer id){
+
+    public static void addToMap(Integer id, User user) {
+        usersmap.put(id, user);
+    }
+
+    public static Object getById(Integer id) {
         return usersmap.get(id);
     }
-    public static Map<Integer, User> getUsers(){return usersmap;}
+
+    public static Map<Integer, User> getUsers() {
+        return usersmap;
+    }
 
     public boolean isEmailUnique(String email) {
         for (Map.Entry<Integer, User> entry : usersmap.entrySet()) {

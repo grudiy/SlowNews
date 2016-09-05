@@ -17,9 +17,7 @@ import static java.lang.System.out;
 @WebServlet("/archive")
 public class Archive extends HttpServlet {
 
-    public void doGet(HttpServletRequest request,
-                      HttpServletResponse response)
-            throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         List<NewsItem> archiveList = new ArrayList<>();
 
@@ -46,7 +44,7 @@ public class Archive extends HttpServlet {
 
         // transmit news list to JSP (VIEW) via Attributes of http request
         request.setAttribute("archiveItems", archiveList);
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/pages/archive.jsp");
-                dispatcher.forward(request, response);
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/pages/archive.jsp");
+        dispatcher.forward(request, response);
     }
 }

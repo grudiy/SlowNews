@@ -5,17 +5,17 @@
 --%>
 <%@ include file="sidebar.jsp" %>
 <html>
-  <head>
+<head>
     <title>Register - SlowNews</title>
-  </head>
-  <body>
+</head>
+<body>
 
-  <div class="container">
+<div class="container">
     <h1>Registered Successfully!</h1>
 
     <div class="form-footer">
-      <a href="/login">Existing user? Login</a><br>
+        <a href="/login">Existing user? Login</a><br>
     </div>
-  </div>
-  </body>
+</div>
+</body>
 </html>

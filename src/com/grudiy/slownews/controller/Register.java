@@ -16,19 +16,17 @@ import java.util.Map;
 @WebServlet("/register")
 public class Register extends HttpServlet {
 
-    public void doGet(HttpServletRequest request,
-                      HttpServletResponse response)
-            throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/pages/register.jsp");
+        dispatcher.forward(request, response);
+    }
 
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/pages/register.jsp");
-                dispatcher.forward(request, response);
-        }
-
-    public void doPost (HttpServletRequest request,
-                        HttpServletResponse response)
+    public void doPost(HttpServletRequest request,
+                       HttpServletResponse response)
             throws ServletException, IOException {
         //add to storage user received from JSP registration form
-        UserStorage.addToMap(UserStorage.getUsers().size() + 1, new User(UserStorage.getUsers().size() + 1, request.getParameter("name"), request.getParameter("email"), request.getParameter("password"), true));
+        UserStorage.addToMap(UserStorage.getUsers().size() + 1, new User(UserStorage.getUsers().size() + 1,
+                request.getParameter("name"), request.getParameter("email"), request.getParameter("password"), true));
         request.getRequestDispatcher("/WEB-INF/pages/registerresult.jsp").forward(request, response);
     }
 }

@@ -1,4 +1,5 @@
 package com.grudiy.slownews.model;
+
 import com.grudiy.slownews.model.UserStorage;
 
 /**

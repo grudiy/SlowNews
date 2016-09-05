@@ -1,9 +1,6 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="other.GlobalStorage" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="com.grudiy.slownews.model.User" %>
 <%@ page import="java.util.Map" %>
-<%@ page import="java.util.HashMap" %>
-<%@ page import="com.grudiy.slownews.model.UserStorage" %>
 <%--
   Created by IntelliJ IDEA.
   User: Owner
@@ -19,14 +16,18 @@
 
 <div class="container">
     <h1>Registered Users</h1>
-    <div class = "users-list">
-        <ul class = "users-list-item">
-           <%
-               Map<Integer, User> usersMap = (Map<Integer, User>) request.getAttribute("allUsersFromStorage");
-               for (Map.Entry<Integer, User> entry : usersMap.entrySet()) { %>
-            <li><%=entry.getValue().getId() + " | " + entry.getValue().getFullName() + " | " + entry.getValue().getEmail() + " | " + entry.getValue().getPassword() + " | " + entry.getValue().getActivated()%></li>
-        <%}
-        %>
+    <div class="users-list">
+        <ul class="users-list-item">
+            <%
+                Map<Integer, User> usersMap = (Map<Integer, User>) request.getAttribute("allUsersFromStorage");
+                for (Map.Entry<Integer, User> entry : usersMap.entrySet()) { %>
+            <li><%=entry.getValue().getId() + " | " + entry.getValue().getFullName() + " | "
+                    + entry.getValue().getEmail() + " | " + entry.getValue().getPassword() + " | "
+                    + entry.getValue().getActivated()%>
+            </li>
+            <%
+                }
+            %>
         </ul>
 
     </div>

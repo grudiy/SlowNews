@@ -11,10 +11,8 @@ import java.io.IOException;
 @WebServlet("/login")
 public class Login extends HttpServlet {
 
-    public void doGet(HttpServletRequest request,
-                      HttpServletResponse response)
-            throws ServletException, IOException {
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/pages/login.jsp");
-                dispatcher.forward(request, response);
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/pages/login.jsp");
+        dispatcher.forward(request, response);
     }
 }

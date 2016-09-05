@@ -7,41 +7,44 @@
 --%>
 <%@ include file="sidebar.jsp" %>
 <html>
-  <head>
+<head>
     <title>SlowNews - the Best News Reader</title>
-  </head>
-  <body>
+</head>
+<body>
 
-  <div class = "content">
+<div class="content">
     <h1>Latest news</h1>
     <ul class="news-list">
-  <%
-         List<NewsItem> newsList = (ArrayList<NewsItem>) request.getAttribute("newsItems");
-          for (NewsItem newsItem:newsList){
-  %>
+        <%
+            List<NewsItem> newsList = (ArrayList<NewsItem>) request.getAttribute("newsItems");
+            for (NewsItem newsItem : newsList) {
+        %>
 
-      <li class ="news-list-item">
-        <div class="news-item">
-          <div class="news-item-image-container">
-            <div class="news-item-action">
-              <div class ="news-item-favorites" title="Add to archive"></div>
-            </div>
-            <div class="news-item-image">
-                <a href="<%=newsItem.getLink()%>"><img src="<%=newsItem.getImageURL()%>" title=<%=newsItem.getTitle()%>"></a>
+        <li class="news-list-item">
+            <div class="news-item">
+                <div class="news-item-image-container">
+                    <div class="news-item-action">
+                        <div class="news-item-favorites" title="Add to archive"></div>
+                    </div>
+                    <div class="news-item-image">
+                        <a href="<%=newsItem.getLink()%>"><img src="<%=newsItem.getImageURL()%>"
+                                                               title=<%=newsItem.getTitle()%>"></a>
             </div>
           </div>
           <div class="news-item-text">
-              <div class = "news-item-title">
-                  <h2><a href="<%=newsItem.getLink()%>"><%=newsItem.getTitle()%></a></h2>
-              </div>
-              <div class="news-item-date"><%=newsItem.getDate()%></div>
-              <%=newsItem.getSummary()%>
-          </div>
-        </div>
-      </li>
+                            <div class="news-item-title">
+                                <h2><a href="<%=newsItem.getLink()%>"><%=newsItem.getTitle()%>
+                                </a></h2>
+                            </div>
+                            <div class="news-item-date"><%=newsItem.getDate()%>
+                            </div>
+                                <%=newsItem.getSummary()%>
+                    </div>
+                </div>
+        </li>
         <%}%>
     </ul>
-  </div>
+</div>
 
-  </body>
+</body>
 </html>

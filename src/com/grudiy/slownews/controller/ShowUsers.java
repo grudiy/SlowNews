@@ -17,9 +17,7 @@ import java.io.IOException;
 @WebServlet("/showusers")
 public class ShowUsers extends HttpServlet {
 
-    public void doGet(HttpServletRequest request,
-                      HttpServletResponse response)
-            throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         //dummy data
         UserStorage.addToMap(1, new User(1, "Andrei First", "aaa-1@ukr.net", "123", true));
