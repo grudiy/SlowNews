@@ -19,11 +19,6 @@
       <input type="submit" class="button" value="Create my account">
     </form>
 
-    <%
-      User registeredUser = new User(UserStorage.getUsers().size() + 1, request.getParameter("name"), request.getParameter("email"), request.getParameter("password"), true); //created user objec
-      request.setAttribute("registeredUser", registeredUser); // object transmitted to servlet
-    %>
-
     <div class="form-footer">
       <a href="/login">Existing user? Login</a><br>
     </div>

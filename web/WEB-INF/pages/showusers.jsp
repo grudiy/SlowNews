@@ -22,7 +22,7 @@
     <div class = "users-list">
         <ul class = "users-list-item">
            <%
-               Map<Integer, User> usersMap = (Map<Integer, User>) request.getAttribute("dummyUsers");
+               Map<Integer, User> usersMap = (Map<Integer, User>) request.getAttribute("allUsersFromStorage");
                for (Map.Entry<Integer, User> entry : usersMap.entrySet()) { %>
             <li><%=entry.getValue().getId() + " | " + entry.getValue().getFullName() + " | " + entry.getValue().getEmail() + " | " + entry.getValue().getPassword() + " | " + entry.getValue().getActivated()%></li>
         <%}
