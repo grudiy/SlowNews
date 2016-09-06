@@ -21,9 +21,7 @@ public class Register extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
-    public void doPost(HttpServletRequest request,
-                       HttpServletResponse response)
-            throws ServletException, IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //add to storage user received from JSP registration form
         UserStorage.addToMap(UserStorage.getUsers().size() + 1, new User(UserStorage.getUsers().size() + 1,
                 request.getParameter("name"), request.getParameter("email"), request.getParameter("password"), true));
