@@ -1,6 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="com.grudiy.slownews.model.User" %>
-<%@ page import="java.util.Map" %>
 <%--
   Created by IntelliJ IDEA.
   User: Owner
@@ -18,18 +16,11 @@
     <h1>Registered Users</h1>
     <div class="users-list">
         <ul class="users-list-item">
-            <%
-                Map<Integer, User> usersMap = (Map<Integer, User>) request.getAttribute("allUsersFromStorage");
-                for (Map.Entry<Integer, User> entry : usersMap.entrySet()) { %>
-            <li><%=entry.getValue().getId() + " | " + entry.getValue().getFullName() + " | "
-                    + entry.getValue().getEmail() + " | " + entry.getValue().getPassword() + " | "
-                    + entry.getValue().getActivated()%>
-            </li>
-            <%
-                }
-            %>
+            <c:forEach items="${allUsersFromStorage}" var="map"  >
+                <li>${map.value.id} | ${map.value.fullName} | ${map.value.email} | ${map.value.password} |
+                 ${map.value.activated}</li>
+            </c:forEach>
         </ul>
-
     </div>
 </div>
 <body>
