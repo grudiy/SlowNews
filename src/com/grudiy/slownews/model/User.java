@@ -2,17 +2,31 @@ package com.grudiy.slownews.model;
 
 import com.grudiy.slownews.model.UserStorage;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * Created by Owner on 29.08.2016.
  */
-
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class User {
+    @XmlElement
     Integer id;
-    String fullName;
-    String email;
-    String password;
-    Boolean activated;
 
+    @XmlElement
+    String fullName;
+
+    @XmlElement
+    String email;
+
+    @XmlElement
+    String password;
+
+    @XmlElement
+    Boolean activated;
 
     public Integer getId() {
         return id;
