@@ -1,7 +1,5 @@
 package com.grudiy.slownews.model;
 
-import com.grudiy.slownews.model.UserStorage;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;

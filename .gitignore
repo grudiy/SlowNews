@@ -1,4 +1,5 @@
 *.iml
 out
 .idea
-
+src/com/grudiy/slownews/api/RegisteredUsers.java
+pom.xml

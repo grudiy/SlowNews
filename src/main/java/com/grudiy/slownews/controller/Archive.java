@@ -12,8 +12,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.lang.System.out;
-
 @WebServlet("/archive")
 public class Archive extends HttpServlet {
 
